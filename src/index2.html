@@ -4,44 +4,16 @@
   <meta charset="UTF-8" />
   <title>Sasa</title>
   <link rel="stylesheet" type="text/css" href="css/base.css" />
+
+  <!-- <script type="text/javascript" src="js/jquery-3.2.1.js"></script> -->
+  <script type="text/javascript" src="lib/jqueryWflbt/scripts/jquery.min.js"></script>
+  <script type="text/javascript" src="lib/jqueryWflbt/scripts/carousel.js"></script>
+
   <link rel="stylesheet" type="text/css" href="css/iconfont/download/font_5nvmzqyri6j/iconfont.css" />
   <link rel="stylesheet" type="text/css" href="css/index.css" />
 
-  <!-- <script type="text/javascript" src="js/jquery-3.2.1.js"></script> -->
-  <!-- 插件轮播图： -->
- <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
- <script type="text/javascript" src="lib/Lunbo.js" ></script>
-
   <script type="text/javascript" src="js/common.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
-
-  <style type="text/css">
-            * {padding: 0;margin: 0;}
-            /*body {background: #f3f3f3;}*/
-            #banner{width:1200px;overflow:hidden;height:500px;}
-            .Box {position: absolute;width:100%;padding-top: 0;z-index: -1;}
-            .Box .content {width: 1200px;margin: 0 auto;}
-            .Box h2 {text-align: center;margin-bottom: 35px;padding-top: 250px;}
-            .Box .Box_con {position: relative;}
-            .Box .Box_con .btnl {position: absolute;}
-            .Box .Box_con .btn {display: block;width: 41px;height: 41px;position: absolute;top: 80px;cursor: pointer;}
-            .Box .Box_con .btnl {background: url(imaes/banner/jtl02.png) no-repeat center;left: -72px;}
-            .Box .Box_con .btnr {background: url(imaes/banner/jtr02.png) no-repeat center;right: -72px;}
-            .Box .Box_con .btnl:hover {background: url(imaes/banner/jtl03.png) no-repeat center;}
-            .Box .Box_con .btnr:hover {background: url(imags/banner/jtr03.png) no-repeat center;}
-            .Box .Box_con .conbox {position: relative;overflow: hidden;}
-            .Box .Box_con .conbox ul {width:1920px;height:450px;position: relative;list-style: none;overflow:hidden;}
-            .Box .Box_con .conbox ul li {float: left;width: 100%;height: 450px;margin-left: 20px;overflow: hidden;}
-            .Box .Box_con .conbox ul li:first-child {margin-left: 0;}
-            .Box .Box_con .conbox ul li img {display: block;width: 100%;height: 450px;transition: all 0.5s;}
-            .Box .Box_con .conbox ul li:hover img {transform: scale(1.1);}
-            
-            .Box .BoxSwitch {margin-top: 30px;text-align: center;}
-            .Box .BoxSwitch span {display: inline-block;*display: inline;*zoom: 1;vertical-align: middle;width: 30px;height: 3px;background: #ccc;margin: 0 5px;cursor: pointer;}
-            .Box .BoxSwitch span.cur {background: red;}
-  </style>
-
-
 </head>
 <body>
  <!-- 头部导航 -->
@@ -648,62 +620,64 @@
         </div>
     </div>
 
-
 <!-- banner -->
-    <!-- <div class="banner"> -->
-        <div class="Box clearfix">
-            <div class="content">
-                <!-- <h2>简单实用的轮播插件</h2> -->            
-                <div class="Box_con clearfix">
-                    <!-- <span class="btnl btn" id="btnl"></span>
-                    <span class="btnr btn" id="btnr"></span> -->
-                    
-                    <div class="conbox" id="BoxUl">
-                        <ul>
-                            <li class="cur"><img src="images/banner/1.jpg" height="420" width="1920" alt=""/></li>
-                            
-                            <li class="cur"><img src="images/banner/2.jpg" alt=""/></li>
-                            
-                            <li class="cur"><img src="images/banner/3.jpg" alt=""/></li>
-                        
-                            <li class="cur"><img src="images/banner/4.jpg" alt=""/></li>
-                            
-                            <li class="cur"><img src="images/banner/5.jpg" alt=""/></li>
-                        </ul>
+    <div id="banner">
+        <div class="content">
+            <div class="a-content">
+                <div class="carousel-content">
+                    <ul class="carousel">
+                        <li><img src="./images/banner/1.jpg"></li>
+                        <li><img src="./images/banner/2.jpg"></li>
+                        <li><img src="./images/banner/3.jpg"></li>
+                        <li><img src="./images/banner/4.jpg"></li>
+                        <li><img src="./images/banner/5.jpg"></li>
+                    </ul>
+                    <ul class="img-index"></ul>
+                    <div class="carousel-prev">
+                        <img src="lib/jqueryWflbt
+                        /images/left1.png">
                     </div>
-                    
-                    <p class="BoxSwitch" id="BoxSwitch">
-                        <span class="cur"></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </p>                  
-                </div>            
+                    <div class="carousel-next">
+                        <img src="lib/jqueryWflbt
+                        /images/right1.png">
+                    </div>
+                </div>
             </div>
         </div>
+        <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="lib/jqueryWflbt/scripts/carousel.js"></script>
         <script type="text/javascript">
-            //滚动元素id，左切换按钮，右切换按钮，切换元素个数id,滚动方式，切换方向，是否自动滚动，滚动距离，滚动时间，滚动间隔，显示个数
-            LbMove('BoxUl','btnl','btnr','BoxSwitch',true,'left',true,305,1000,2000,4);
+            $(function(){
+                $(".carousel-content").carousel({
+                carousel : ".carousel",//轮播图容器
+                indexContainer : ".img-index",//下标容器
+                prev : ".carousel-prev",//左按钮
+                next : ".carousel-next",//右按钮
+                timing : 3000,//自动播放间隔
+                animateTime : 700,//动画时间
+                autoPlay : true,//是否自动播放 true/false
+                direction : "left",//滚动方向 right/left
+            });
+
+                $(".carousel-content").hover(function(){
+                    $(".carousel-prev,.carousel-next").fadeIn(300);
+                },function(){
+                    $(".carousel-prev,.carousel-next").fadeOut(300);
+                });
+
+                $(".carousel-prev").hover(function(){
+                    $(this).find("img").attr("src","lib/jqueryWflbt/images/left2.png");
+                },function(){
+                    $(this).find("img").attr("src","lib/jqueryWflbt/images/left1.png");
+                });
+                $(".carousel-next").hover(function(){
+                    $(this).find("img").attr("src","lib/jqueryWflbt/images/right2.png");
+                },function(){
+                    $(this).find("img").attr("src","lib/jqueryWflbt/images/right1.png");
+                });
+            });
         </script>
-    <!-- </div> -->
-
-
-<!-- 三大广告 -->
-    <div class="advertisement">
-        <div class="container clearfix">
-            <ul class="clearfix">
-                <li><a href=""><img src="images/index/01.jpg" /></a></li>
-                <li><a href=""><img src="images/index/02.jpg" /></a></li>
-                <li><a href=""><img src="images/index/03.jpg" /></a></li>
-            </ul>
-            <div class="promise">
-                <img src="images/index/promise.JPG" alt="" />
-            </div>
-        </div>
     </div>
-
-
-
 
 
 

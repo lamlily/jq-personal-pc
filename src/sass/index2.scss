@@ -1,0 +1,245 @@
+
+li{list-style:none;}
+// 头部导航
+#topbar{
+   position:relative;
+      width: 100%;
+      height: 30px;
+      background: #eee;
+      border-bottom: 1px solid #F0F0F0;
+    .user_left{
+         width: 280px; 
+         float:left;
+         p{
+          font-size: 12px;
+          color: #777777;
+          line-height: 30px;
+            a{color:#ec3e7d;}
+            #login{
+           }
+            #reg{
+              display: inline-block;
+            }
+            #out{
+              display: none;
+            }
+            #name{
+               display: none;
+            }
+         }
+    }
+    .user_right{
+        // width:800px;
+        float:right;
+        height:30px;
+        ul{
+            a{color:#6c6c6c;}
+            li{
+                float:left;
+                line-height:30px;
+                a{
+                   padding-right:8px; 
+                }
+                      
+            }
+            li.noline{
+                height:30px;
+                #mem_dl_539{
+                    display:none;
+                }
+                #minicart_540{
+                    width:100px;
+                }
+            }
+        }
+    }
+}
+
+// 搜索栏
+.header-main{
+    // width: 1200px;
+    padding:20px 0 20px 0;
+    box-sizing:border-box;
+    .sotelogo-rs{
+        float:left;
+        position:relative;
+    }
+    .search{
+        width: 500px;
+        height: 66px;
+        float:left;
+        margin-left:150px;
+        position:relative;
+
+        form{
+          .btn-search {
+                position: absolute;
+                right: 69px;
+                top: 0px;
+                width: 80px;
+                height: 36px;
+                background: #ec3e7d;
+                color: #fff;
+            }  
+        }
+        .hot-keywords{
+            a{
+                color:#6c6c6c;
+                padding-right:10px;
+            }
+        }
+
+        
+        input{
+            width: 346px;
+            height: 30px;
+            border:3px solid #ec3e7d;
+        }
+    }
+    .topright{
+        float:right ;
+    }
+}
+
+// 分类栏
+.nav-category{
+    height:36px;
+    .container{
+        .all-category{       
+            width: 212px;
+            background: #EF3C79;
+            color: white;
+            font-size: 12px;
+            line-height: 36px;
+            z-index: 888;
+            // box-sizing:border-box;
+            margin-right:20px;
+            a{
+            color:#fff;
+            }
+            #cat_550{
+                .sasa_category{
+                    .sasa_category_ul{
+                        .sasa_category_item_inner{
+                             padding:0 10px;
+                            .sasa_category_item_hd{
+
+                                float:left;
+                               
+                            }
+                            .more_category{
+                                float:right;
+
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+
+        .tj-category-rs{
+            width:700px;
+            ul#sub_nav_551{
+                li.sub_nav_item,li.sub_nav_sep{
+                    float:left;
+                    
+                    a{
+                        padding-right:8px;
+                        color:#000;
+                        // padding-top:5px;
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+// banner
+#banner{
+    .content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .a-content{
+               position: relative;
+               .carousel-content {
+                      width: var(--mywidth);
+                      height: var(--myheight);
+                      position: relative;
+                      overflow: hidden;
+                      border-radius: 10px;
+                      .carousel {
+                          height: var(--myheight);
+                          position: absolute;
+                          li {
+                              float: left;
+                              img {
+                                  width: var(--mywidth);
+                                  height: var(--myheight);
+                                }
+
+                            }
+
+                      }
+                      .img-index {
+                          position: absolute;
+                          bottom: 8px;
+                          width: 100%;
+                          display: flex;
+                          justify-content: center;
+                          li {
+                              float: left;
+                              width: 18px;
+                              height: 18px;
+                              line-height: 18px;
+                              text-align: center;
+                              background-color: rgba(0, 0, 0, 0.2);
+                              font-size: 12px;
+                              cursor: pointer;
+                              margin: 0 3px;
+                              color: #fff;
+                            }
+                            li.js_index, .img-index li:hover {
+                              background-color: rgba(0, 0, 0, 0.7);
+                            }
+                        }
+                      .carousel-prev, .carousel-next {
+                          position: absolute;
+                          display: inline-block;
+                          top: 45%;
+                          cursor: pointer;
+                        }
+                        .carousel-prev {
+                          left: 300px;
+                        }
+
+                        .carousel-next {
+                          right: 300px;
+                        }
+                }
+        }
+        .a-content:before {
+              content: '';
+              width: 500px;
+              height: 300px;
+              left: 35px;
+              top: 19px;
+              z-index: -1;
+              position: absolute;
+        }
+        .a-content:after {
+              content: '';
+              position: absolute;
+              top: -25px;
+              left: 25%;
+              width: 270px;
+              height: 40px;
+              display: none;
+        }
+    }
+}

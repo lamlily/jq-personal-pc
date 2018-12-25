@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-12-24 09:59:15
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-12-24 20:49:11
+* @Last Modified time: 2018-12-25 10:08:40
 */
 
 jQuery($=>{
@@ -146,45 +146,25 @@ jQuery($=>{
         var password=$("#password").val();
         console.log(password);
         // console.log($(".checkbox")[0].checked);
-        if($(".checkbox")[0].checked){
-
-
+        if($("#checkbox")[0].checked){
+            console.log(999);
+            // 发送ajax请求；传参
             $.ajax({
                 type:"post",
                 url:"../api/userData.php",
                 async:true,
                 data:{
-                    "`reg":"reg",
+                    "reg":"reg",
                     "username":username,
                     "password":password
                 
                 },
-                success:function(str){
-                    console.log(str)
+                success:function(str) {
+                    console.log(888)
                     if(str!=false){
-                    //     // console.log(666);
-                    //     //  点击注册跳转到登录页面
-                    //    //  location.href="./login.html";
+                        console.log(str);
+                        location.href="http://localhost:8090/html/login.html?name="+username;
                     }
-                    
-                    //用户名
-                    // $user.on("blur",function(){
-                    //     var $_user = $user.val();
-                    //     if(!/^1[3-9]\d{9}$/i.test($_user)){
-                    //         alert("你的手机号不满足条件");
-                    //         $("#username").val("");
-                    //         return false;
-                    //     }
-
-                    //     var $shuzu = [];
-                    //     for(var i=0;i<data.length;i++){
-                    //         $shuzu.push(data[i].username);
-                    //     }
-                    //     if($shuzu.indexOf($_user) != -1){                    
-                    //         alert("用户名已存在");
-                    //         $("#username").val("");
-                    //     }
-                    // })
                 }
             })
             // 两次密码一致

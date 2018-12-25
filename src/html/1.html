@@ -1,0 +1,63 @@
+<div id="banner">
+    <div class="content">
+        <div class="a-content">
+            <div class="carousel-content">
+                <ul class="carousel">
+                    <li><img src="images/banner/1.jpg"></li>
+                    <li><img src="./images/banner/2.jpg"></li>
+                    <li><img src="./images/banner/3.jpg"></li>
+                    <li><img src="./images/banner/4.jpg"></li>
+                </ul>
+                <ul class="img-index"></ul>
+                <div class="carousel-prev">
+                    <img src="lib/jqueryWflbt
+                    /images/left1.png">
+                </div>
+                <div class="carousel-next">
+                    <img src="lib/jqueryWflbt
+                    /images/right1.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="lib/jqueryWflbt/scripts/carousel.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".carousel-content").carousel({
+                carousel : ".carousel",//轮播图容器
+                indexContainer : ".img-index",//下标容器
+                prev : ".carousel-prev",//左按钮
+                next : ".carousel-next",//右按钮
+                timing : 3000,//自动播放间隔
+                animateTime : 700,//动画时间
+                autoPlay : true,//是否自动播放 true/false
+                direction : "left",//滚动方向 right/left
+            });
+
+            $(".carousel-content").hover(function(){
+                $(".carousel-prev,.carousel-next").fadeIn(300);
+            },function(){
+                $(".carousel-prev,.carousel-next").fadeOut(300);
+            });
+
+            $(".carousel-prev").hover(function(){
+                $(this).find("img").attr("src","lib/jqueryWflbt/images/left2.png");
+            },function(){
+                $(this).find("img").attr("src","lib/jqueryWflbt/images/left1.png");
+            });
+            $(".carousel-next").hover(function(){
+                $(this).find("img").attr("src","lib/jqueryWflbt/images/right2.png");
+            },function(){
+                $(this).find("img").attr("src","lib/jqueryWflbt/images/right1.png");
+            });
+        });
+    </script>
+</div>
+
+<div id="imgs">
+    <img src="images/p1.jpg" alt="" />
+    <img src="images/p2.jpg" alt="" />
+    <img src="images/p3.jpg" alt="" />
+    <img src="images/p4.jpg" alt="" />          
+</div>

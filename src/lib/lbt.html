@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="lbt.css" />
+        <script type="text/javascript" src="../jquery-1.10.1.min.js"></script>
+        <script type="text/javascript" src="./Lunbo.js"></script>
+    </head>
+    <body>
+        
+        <div class="Box">
+            <div class="content">
+                <h2>简单实用的轮播插件</h2>
+                
+                <div class="Box_con clearfix">
+                    <span class="btnl btn" id="btnl"></span>
+                    <span class="btnr btn" id="btnr"></span>
+                    
+                    <div class="conbox" id="BoxUl">
+                        <ul>
+                            <li class="cur"><img src="../2b1.jpg" alt=""/></li>
+                            
+                            <li class="cur"><img src="../1b1.jpg" height="1000" width="1000" alt=""/></li>
+                            
+                            <li class="cur"><img src="../1b1.jpg" alt=""/></li>
+                        
+                            <li class="cur"><img src="../1b1.jpg" alt=""/></li>
+                            
+                            <li class="cur"><img src="../1b1.jpg" alt=""/></li>
+                        </ul>
+                    </div>
+                    
+                    <p class="BoxSwitch" id="BoxSwitch">
+                        <span class="cur"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </p>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+    <script type="text/javascript">
+        //滚动元素id，左切换按钮，右切换按钮，切换元素个数id,滚动方式，切换方向，是否自动滚动，滚动距离，滚动时间，滚动间隔，显示个数
+        LbMove('BoxUl','btnl','btnr','BoxSwitch',true,'left',true,305,1000,500,4);
+    </script>
+
+    </body>
+</html>
