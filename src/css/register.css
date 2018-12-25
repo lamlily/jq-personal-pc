@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/* 
+* @Author: Marte
+* @Date:   2018-10-22 11:21:56
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-10-22 20:51:22
+*/
+/*=====================================头部===================================*/
+#header {
+  background: #fff;
+  position: relative;
+  z-index: 300;
+  padding: 40px;
+}
+
+#header a img {
+  width: 181px;
+  height: 45px;
+}
+
+#main .container .layout {
+  width: 1090px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 5px;
+}
+
+#main .container .layout .mainLeft {
+  float: left;
+  padding: 60px 0  0 0px;
+}
+
+#main .container .layout .mainLeft img {
+  width: 550px;
+  height: 350px;
+}
+
+#main .container .layout .mainRight {
+  float: left;
+  width: 400px;
+  height: 500px;
+  border: 1px solid #eee;
+  box-shadow: 1px -1px 1px 1px #eee,1px 1px 1px 1px #eee,-1px -1px 1px 1px #eee;
+  padding: 35px;
+}
+
+#main .container .layout .mainRight h3 {
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+#main .container .layout .mainRight h3 a:first-child {
+  float: left;
+  font-size: 24px;
+}
+
+#main .container .layout .mainRight h3 a:last-child {
+  float: right;
+  font-size: 16px;
+}
+
+#main .container .layout .mainRight h3 a:last-child span {
+  color: #ec3e7d;
+}
+
+#main .container .layout .mainRight #logForm .formcontent input {
+  width: 380px;
+  height: 26px;
+  line-height: 26px;
+  padding: 4px;
+  margin-bottom: 30px;
+}
+
+#main .container .layout .mainRight #logForm .formcontent input#checkcode {
+  width: 120px;
+}
+
+#main .container .layout .mainRight #logForm .formcontent input.checkbox {
+  width: 15px;
+  height: 15px;
+}
+
+#main .container .layout .mainRight #logForm input#submit {
+  width: 380px;
+  height: 40px;
+  background: #ec3e7d;
+  color: #fff;
+}
+
+a {
+  color: #000;
+}
+
+/*// ================================注册主体==================================*/
+/*=====================================底部====================================*/
+#footer {
+  width: 988px;
+  margin: 0 auto;
+}
