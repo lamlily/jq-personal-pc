@@ -168,7 +168,7 @@ li{list-style:none;}
 
 // 广告位
 .advertisement{
-    // height:190px;
+    // height:330px;
     // width:100%;
     margin-top:30px;
     ul{
@@ -181,11 +181,131 @@ li{list-style:none;}
         }
     }
     .promise{
-        height:120px;
+        // height:120px;
         img{
             width:100%;
             height:120px;
+            // margin:0 ;
+
         }
 
     }
+}
+
+// 主体1：每日必看
+.flashsale{
+    // background: #f2f2f2;
+    // height:1174px;
+    .container{
+        .sasa_mustcheck{
+            .sasa_mustcheck_head{
+               text-align:center;
+               font-size:24px;
+                line-height:26px;
+                height:26px;
+                margin: 30px;
+            }
+            p:first-child{
+                color:#e93b78;
+                font-size:20px;
+            }
+            span:last-of-type{
+                display:inline-block;
+                color:#fff;
+                width:100px;
+                height:20px;
+                background: #e93b78;
+                text-align:center;
+            }
+
+            // #sasa_mustcheck_container{
+            //     width:1200px;
+            //     height:1112px;
+            //     background: red;
+            //     a{
+            //         color:#ccc;
+            //         display:block;
+            //         margin-bottom:10px;
+            //         div.sasa_mustcheck_item{
+            //             width: 592px;
+            //             height:278px;
+            //             img{
+            //                 width: 360px;
+            //                 height:260px;
+            //             }
+            //             div.sasa_mustcheck_info{
+            //                 width: 230px;
+            //                 height: 260px;
+            //                 background: red;
+            //             }
+            //           }  
+            //         }
+            // }
+        }
+    }
+}
+
+// #sasa_mustcheck_container\20 clearfix\20 > a:nth-child(1) > div > div
+// #sasa_mustcheck_container\20 clearfix\20
+// 
+// style="width: 230px;height: 260px;text-align:center;padding-top:60px;"
+
+
+// 主体2：新品
+// .newarrivals-rs{
+//     .container{
+//         a{style="color:#000"}
+//         .sasa_new{
+//             .sasa_new_head{
+//                 text-align:center;
+//                 font-size:24px;
+//                 line-height:26px;
+//                 height:26px;
+//                 margin: 15px;
+//             }
+//         }
+//     }
+// }
+// 香港
+//   style="color:#ee9c23"
+// 69
+//   style="color:#fc3f83"
+//  a
+//  style="color:#000"
+
+
+// 主体3：限时特卖
+.sasa_limit_head_container{
+    .container{
+
+        a{
+            color:#000;
+            
+           .yew{
+                color:#ee9c23;
+            }
+            .sasa_limit_btn{
+                color:#fff;
+                background: #fc3f83;
+                width:100px;
+                height:30px;
+                display:inline-block;
+                text-align:center;
+                line-height:30px;
+                margin-left:380px;
+            }
+
+         
+        }
+     }
+}
+//  style="width:480px;height:280px;"
+
+
+
+// 底部
+.footer{
+    // height:500px;
+    margin-top:100px;
+    // background: url("../images/index/footer.JPG") no-repeat;
 }
